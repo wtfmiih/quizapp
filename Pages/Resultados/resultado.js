@@ -3,7 +3,7 @@ import { trocarTema, verificarTema } from "../../helpers/tema-helper.js"
 const botaoTema = document.querySelector(".tema button")
 const body = document.querySelector("body")
 const assunto = localStorage.getItem("assunto")
-
+const botaoJogarNovamente = document.querySelector("main button")
 
 botaoTema.addEventListener("click", () => {
     trocarTema(body, botaoTema)
@@ -41,5 +41,16 @@ function inserirResultado() {
             `
 }
 
+function jogarNovamente() { 
+
+    localStorage.removeItem("pontos") 
+
+    localStorage.removeItem("assunto") 
+
+ 
+
+    window.location.href = "../../index.html" 
+
+} 
 
 inserirResultado()
